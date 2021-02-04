@@ -1,3 +1,6 @@
+//TO GIVE PAGINATION AS PER PAGE ONLY 50 JOBS ARE ALLOWED
+
+
 import React from 'react'
 import { Pagination } from 'react-bootstrap'
 

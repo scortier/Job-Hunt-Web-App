@@ -1,10 +1,28 @@
+//to display the job in card form
 import React, { useState } from 'react'
 import { Card, Badge, Button, Collapse } from 'react-bootstrap'
 import ReactMarkdown from 'react-markdown'
 
 export default function Job({ job }) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false)//intialstate as false for collapse component for job detail
 
+  /*
+  card.body into 2 parts 
+  right with logo
+  left  :
+  title the with  -  company name
+  subtitle ( date as string and format depends on region ) with mb-2 as margin-bottom
+  badges 1. job type  such as full time or part time 2.location with class as margin right of 2
+  Link with separate div and with word wrapped inside it using word break as styling
+
+  RIGHT:
+  logo with styling
+  d-sm-none - to not show logo on small screen 
+  d-md-block -  to show logo on large screen
+
+  Card text to capture all detail of the job 
+  
+  */
   return (
     <Card className="mb-3">
       <Card.Body>
