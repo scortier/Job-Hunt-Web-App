@@ -8,7 +8,10 @@ export default function JobsPagination({ page, setPage, hasNextPage }) {
   function adjustPage(amount) {
     setPage(prevPage => prevPage + amount)
   }
+/*
+for dot dot - ellipsis is used
 
+*/
   return (
     <Pagination>
       {page !== 1 && <Pagination.Prev onClick={() => adjustPage(-1)} />}
