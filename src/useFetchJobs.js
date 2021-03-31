@@ -16,8 +16,11 @@ const ACTIONS = {
 };
 
 //URL FOR EXTRACTING DATA FROM GITHUB JOBS API
+// const BASE_URL =
+//   "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json";
+
 const BASE_URL =
-  "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json";
+  "https://secret-ocean-49799.herokuapp.com/https://jobs.github.com/positions.json";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -58,7 +61,8 @@ export default function useFetchJobs(params, page) {
         //response will be generated and data will be received in form of res.data
         dispatch({ type: ACTIONS.GET_DATA, payload: { jobs: res.data } });
       })
-      .catch((e) => { //if some error occur 
+      .catch((e) => {
+        //if some error occur
         if (axios.isCancel(e)) return;
         dispatch({ type: ACTIONS.ERROR, payload: { error: e } });
       });
